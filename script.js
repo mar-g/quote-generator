@@ -42,7 +42,8 @@ async function getQuotes() {
         apiQuotes = await response.json();
         newQuote();
     } catch (error) {
-        console.log('error', error);
+        quoteText.textContent ="Sorry, something went wrong. Please try again!";
+        complete();
     }
 }
 
